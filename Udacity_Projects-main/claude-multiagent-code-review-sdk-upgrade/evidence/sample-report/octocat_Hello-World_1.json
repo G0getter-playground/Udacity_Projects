@@ -1,0 +1,87 @@
+{
+  "pullRequest": {
+    "owner": "octocat",
+    "repo": "Hello-World",
+    "number": 1
+  },
+  "fileReviews": [
+    {
+      "file": "README",
+      "codeQuality": {
+        "file": "K:/Personal/Udacity/AI_CLAUDE_ND/cd14715-sdk-upgrade/.pr-review-workspace/octocat-Hello-World-1/README",
+        "issues": [
+          {
+            "line": 2,
+            "severity": "medium",
+            "category": "maintainability",
+            "description": "Command and description are concatenated without spacing or delimiter. The text '$ mkdir ~/Hello-WorldCreates a directory...' runs together, making it difficult to distinguish where the command ends and the description begins.",
+            "suggestion": "Add proper formatting with either a newline, markdown code block, or clear delimiter between the command and its description. For example: '$ mkdir ~/Hello-World\\nCreates a directory for your project called \"Hello-World\" in your user directory' or use a consistent format like '$ mkdir ~/Hello-World - Creates a directory...'"
+          },
+          {
+            "line": 3,
+            "severity": "medium",
+            "category": "maintainability",
+            "description": "Command and description are concatenated without spacing or delimiter. The text '$ cd ~/Hello-WorldChanges the current working directory...' runs together with no clear separation.",
+            "suggestion": "Add proper formatting with either a newline, markdown code block, or clear delimiter. For example: '$ cd ~/Hello-World\\nChanges the current working directory to your newly created directory' or use consistent delimiter syntax."
+          },
+          {
+            "line": 6,
+            "severity": "low",
+            "category": "maintainability",
+            "description": "Documentation is incomplete - the command '$ touch README' has no description, unlike lines 2-3 which include explanations. This creates inconsistent documentation structure.",
+            "suggestion": "Add a description explaining what this command does to maintain consistency with the documentation pattern established in lines 2-3. For example: '$ touch README - Creates an empty README file in your repository'"
+          }
+        ],
+        "overallScore": 70,
+        "summary": "This README file contains basic Git setup instructions with formatting issues that impact readability and maintainability. Commands and descriptions are concatenated without proper delimiters on lines 2-3, making the documentation difficult to parse visually. The file also lacks consistent structure, with line 6 missing a description entirely."
+      },
+      "testCoverage": {
+        "file": "K:/Personal/Udacity/AI_CLAUDE_ND/cd14715-sdk-upgrade/.pr-review-workspace/octocat-Hello-World-1/README",
+        "hasTests": true,
+        "testFiles": [],
+        "untestedPaths": [],
+        "coverageEstimate": 100,
+        "summary": "This is a plain text documentation file (README) containing Git setup instructions and commands. It has no executable code, functions, classes, or testable logic. Documentation files do not require unit tests as they contain no programmatic behavior to verify."
+      },
+      "refactorings": {
+        "file": "K:/Personal/Udacity/AI_CLAUDE_ND/cd14715-sdk-upgrade/.pr-review-workspace/octocat-Hello-World-1/README",
+        "suggestions": [],
+        "summary": "This is a plain text README file containing Git setup instructions, not a source code file. Code refactoring analysis (extract-function, rename, modernize, simplify, pattern-improvement) does not apply to documentation files. The file does have formatting issues - commands and descriptions are concatenated without line breaks - but those are documentation quality concerns outside the scope of code refactoring."
+      }
+    }
+  ],
+  "summary": {
+    "totalFiles": 1,
+    "overallScore": 70,
+    "criticalIssues": 0,
+    "highPriorityTests": 0,
+    "refactoringOpportunities": 0
+  },
+  "recommendations": [
+    {
+      "priority": "medium",
+      "category": "documentation-quality",
+      "description": "Fix formatting in README: separate commands from their descriptions with proper delimiters (newlines, hyphens, or markdown code blocks) on lines 2-3 to improve readability and make the documentation easier to parse.",
+      "files": [
+        "README"
+      ]
+    },
+    {
+      "priority": "low",
+      "category": "documentation-consistency",
+      "description": "Complete the documentation structure by adding a description for the '$ touch README' command on line 6 to match the pattern established in earlier lines.",
+      "files": [
+        "README"
+      ]
+    }
+  ],
+  "metadata": {
+    "analyzedAt": "2026-08-28T00:00:00Z",
+    "duration": 70000,
+    "agentVersions": {
+      "code-quality-analyzer": "1.0.0",
+      "test-coverage-analyzer": "1.0.0",
+      "refactoring-suggester": "1.0.0"
+    }
+  }
+}
