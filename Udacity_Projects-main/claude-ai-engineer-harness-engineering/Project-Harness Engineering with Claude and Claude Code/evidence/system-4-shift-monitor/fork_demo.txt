@@ -1,0 +1,7 @@
+fork 1 dir: data\forks\lot-2026-0430-B-defective -> hot_state bytes: 980
+fork 2 dir: data\forks\capacitor-c7-tooling-wear -> hot_state bytes: 980
+
+main scratchpad line count before merge: 1
+main scratchpad line count after merge: 3
+
+main hot_state.json UNCHANGED, bytes: 980

@@ -1,0 +1,2 @@
+new defects returned: 17
+(5, 0, 204, 'SEARCH defects USING INDEX idx_defects_ts (ts>?)')
