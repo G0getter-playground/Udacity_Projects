@@ -100,12 +100,6 @@ export class CodeReviewOrchestrator {
       options: {
         model: this.model,
         maxTurns: this.maxTurns,
-        // Non-interactive CI/CD use: no human is present to answer a permission prompt, so
-        // permission checks are bypassed entirely rather than left at 'default' (which would
-        // hang waiting for approval) or 'dontAsk' (which would silently deny anything not
-        // pre-enumerated in allowedTools). allowedTools below still scopes what's available.
-        permissionMode: 'bypassPermissions',
-        allowDangerouslySkipPermissions: true,
         mcpServers: mcpServersConfig,
         agents: {
           'code-quality-analyzer': codeQualityAnalyzer,
